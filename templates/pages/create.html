@@ -1,0 +1,23 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% extends 'base.html' %}
+{% block title %}Create{% endblock %}
+
+{% block body %}
+
+<div class = "container">
+    <h1>Créer un nouveau produit</h1>
+{{form_start(form)}}
+
+{{form_widget(form.name, {'attr':{'placeholder':"Titre de l'article"}})}}<br>
+{{form_widget(form.description, {'attr':{'placeholder':"Description du produit"}})}}<br>
+{{form_widget(form.prix, {'attr':{'placeholder':"Prix en Euro"}})}}<br>
+{{form_widget(form.img, {'attr':{'placeholder':"image"}})}}<br>
+
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+{{form_end(form)}}
+
+
+</div>
+{% endblock %}
+
